@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: #000;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 320px;
+    width: 100%;
+}
+
+.display {
+    background: #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.result {
+    color: white;
+    font-size: 48px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-number {
+    background: #333;
+    color: white;
+}
+
+.btn-number:hover {
+    background: #555;
+}
+
+.btn-operator {
+    background: #ff9500;
+    color: white;
+}
+
+.btn-operator:hover {
+    background: #ffb143;
+}
+
+.btn-operator.active {
+    background: white;
+    color: #ff9500;
+}
+
+.btn-function {
+    background: #a6a6a6;
+    color: #000;
+}
+
+.btn-function:hover {
+    background: #c7c7c7;
+}
+
+.btn-zero {
+    grid-column: span 2;
+    border-radius: 32px;
+    width: 142px;
+    justify-content: flex-start;
+    padding-left: 24px;
+}
+
+.btn-equals {
+    background: #ff9500;
+    color: white;
+}
+
+.btn-equals:hover {
+    background: #ffb143;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        max-width: 280px;
+    }
+    
+    .btn {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+    
+    .btn-zero {
+        width: 122px;
+    }
+    
+    .result {
+        font-size: 36px;
+    }
+}
